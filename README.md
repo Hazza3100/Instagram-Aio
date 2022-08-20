@@ -8,4 +8,4 @@ I want to add more features but don't know what.
 £5 for early access
 ```
 
-![Screenshot](insta_aio.png)
+![Screenshot](ig_aio.png)
