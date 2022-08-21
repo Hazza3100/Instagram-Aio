@@ -4,8 +4,10 @@
 I want to add more features but don't know what.
 
 ```
-100 stars for free release
-£5 for early access
+Follow
+Unfollow
+Like
+Comment Spammer
 ```
 
 ![Screenshot](ig_aio.png)
