@@ -80,17 +80,17 @@ class Convert():
         headers = {
             'authority': 'i.instagram.com',
             'accept': '*/*',
-            'accept-language': 'en-GB,en;q=0.9',
+            'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
             'origin': 'https://www.instagram.com',
             'referer': 'https://www.instagram.com/',
-            'sec-ch-ua': '"Chromium";v="104", " Not A;Brand";v="99", "Google Chrome";v="104"',
+            'sec-ch-ua': '"Google Chrome";v="105", "Not)A;Brand";v="8", "Chromium";v="105"',
             'sec-ch-ua-mobile': '?0',
             'sec-ch-ua-platform': '"Windows"',
             'sec-fetch-dest': 'empty',
             'sec-fetch-mode': 'cors',
             'sec-fetch-site': 'same-site',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36',
-            'x-csrftoken': 'eB8F8DBi9fUrycehIas063lomgcrfwLS',
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36',
+            'x-csrftoken': '2SAvFYoHgS8GwleiP7j5vTLPqRJX4IFL',
             'x-ig-app-id': '936619743392459',
         }
 
@@ -99,9 +99,7 @@ class Convert():
         }
 
         r = requests.get('https://i.instagram.com/api/v1/users/web_profile_info/', params=params, headers=headers)
-        data = r.text
-        get_id = data.split('"id":')[1]
-        id = get_id.split('"')[1]
+        id = r.text.split('"id":"')[2].split('"')[0]
         return id
 
 
