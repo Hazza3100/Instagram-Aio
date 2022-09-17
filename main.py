@@ -44,7 +44,7 @@ class Choose_Cookie():
         return cookies
     cookie = get_cookie()
     cookies2 = cycle(cookie)
-    print(cookies2)
+    #print(cookies2)
 
 class Convert():
 
