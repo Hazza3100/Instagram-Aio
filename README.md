@@ -4,10 +4,10 @@
 First fully request FREE Instagram aio
 
 ```
-> Follow Bot
-> Unfollow Bot
-> Like Bot
-> Comment Spammer
+[X] Follow Module
+[X] Unfollow Module
+[X] Like Module
+[X] Comment Spammer
 ```
 
 ![Screenshot](ig_aio.png)
