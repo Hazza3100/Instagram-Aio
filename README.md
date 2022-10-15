@@ -10,7 +10,7 @@ First fully request FREE Instagram aio
 [X] Comment Spammer
 ```
 
-![Screenshot](ig_aio.png)
+![Screenshot](aio2.png)
 
 
 ```
