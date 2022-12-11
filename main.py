@@ -129,34 +129,34 @@ class menu:
         if choice == 1:
             username = input(f"{Fore.GREEN}[{Fore.CYAN} ? {Fore.GREEN}] Username {Fore.CYAN}> {Fore.WHITE}")
             threads = input(f"{Fore.GREEN}[{Fore.CYAN} ? {Fore.GREEN}] Number of follows {Fore.CYAN}> {Fore.WHITE}")
-            user_id = aio().get_id(username)
+            user_id = aio.get_id(username)
 
             for i in range(int(threads)):
-                threading.Thread(target=aio.follow, args=(user_id,)).start()
+                threading.Thread(target=aio().follow, args=(user_id,)).start()
 
         if choice == 2:
             username = input(f"{Fore.GREEN}[{Fore.CYAN} ? {Fore.GREEN}] Username {Fore.CYAN}> {Fore.WHITE}")
             threads = input(f"{Fore.GREEN}[{Fore.CYAN} ? {Fore.GREEN}] Number of unfollows {Fore.CYAN}> {Fore.WHITE}")
-            user_id = aio().get_id(username)
+            user_id = aio.get_id(username)
 
             for i in range(int(threads)):
-                threading.Thread(target=aio.unfollow, args=(user_id,)).start()
+                threading.Thread(target=aio().unfollow, args=(user_id,)).start()
 
         if choice == 3:
             postID = input(f"{Fore.GREEN}[{Fore.CYAN} ? {Fore.GREEN}] Post ID {Fore.CYAN}> {Fore.WHITE}")
             threads = input(f"{Fore.GREEN}[{Fore.CYAN} ? {Fore.GREEN}] Number of Likes {Fore.CYAN}> {Fore.WHITE}")
-            post_ID = aio().get_post(postID)
+            post_ID = aio.get_post(postID)
             for i in range(int(threads)):
-                threading.Thread(target=aio.like, args=(post_ID,)).start()
+                threading.Thread(target=aio().like, args=(post_ID,)).start()
 
         if choice == 4:
             postID = input(f"{Fore.GREEN}[{Fore.CYAN} ? {Fore.GREEN}] Post ID {Fore.CYAN}> {Fore.WHITE}")
             message = input(f"{Fore.GREEN}[{Fore.CYAN} ? {Fore.GREEN}] Message {Fore.CYAN}> {Fore.WHITE}")
             threads = input(f"{Fore.GREEN}[{Fore.CYAN} ? {Fore.GREEN}] Number of comments {Fore.CYAN}> {Fore.WHITE}")
-            post_ID = aio().get_post(postID)
+            post_ID = aio.get_post(postID)
 
             for i in range(int(threads)):
-                threading.Thread(target=aio.comment, args=(post_ID, message,)).start()
+                threading.Thread(target=aio().comment, args=(post_ID, message,)).start()
         
 
 
